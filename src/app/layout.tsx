@@ -20,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} antialiased bgMobile w-full h-dvh`}>{children}</body>
+      <body
+        className={`${raleway.variable} antialiased h-dvh flex justify-center items-center bgMobile md:bgDesktop bg-blue-950-custom px-[25px] md:px-[114px]`}>
+        {children}
+      </body>
     </html>
   );
 }

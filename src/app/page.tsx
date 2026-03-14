@@ -4,7 +4,11 @@ import { cn } from '@/lib/utils';
 
 export default function Home() {
   return (
-    <main className={cn('px-[25px] py-[128px]', 'flex flex-col gap-[16px]')}>
+    <main
+      className={cn(
+        'w-full max-w-[540px] xl:max-w-[922px]',
+        'flex flex-col xl:flex-row gap-[16px] xl:gap-[32px] xl:items-end',
+      )}>
       <Fylo />
       <Usage />
     </main>

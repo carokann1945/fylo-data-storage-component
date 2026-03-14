@@ -4,13 +4,13 @@ export default function Usage() {
   return (
     <div
       className={cn(
-        'w-full h-[154px]',
+        'w-full max-w-[540px] h-[154px]',
         'relative flex justify-center items-center',
         'px-[32px]',
         'bg-blue-850-custom rounded-[10px]',
       )}>
       <div className={cn('w-full h-[74px]', 'flex flex-col gap-[16px]')}>
-        <h1 className={cn('w-full text-center typo-2-regular text-blue-200-custom')}>
+        <h1 className={cn('w-full text-center md:text-start typo-2-regular text-blue-200-custom')}>
           You’ve used <b>815 GB</b> of your storage
         </h1>
         <div className={cn('w-full h-[42px]', 'flex flex-col gap-[8px]')}>
@@ -32,13 +32,21 @@ export default function Usage() {
           'flex justify-center items-center',
           'bg-white rounded-[10px]',
           'absolute bottom-[-40px] left-1/2 -translate-x-1/2',
+          'xl:left-auto xl:translate-x-0 xl:top-[-50px] xl:right-[35px]',
         )}>
         <div className={cn('flex gap-[8px] items-center')}>
-          <span className={cn('typo-1 text-blue-950-custom')}>
-            <span className="relative top-[3px]">1</span>8<span className="relative top-[3px]">5</span>
-          </span>
+          <span className={cn('typo-1 text-blue-950-custom')}>185</span>
           <span className={cn('typo-3-bold text-blue-950-custom/50')}>GB LEFT</span>
         </div>
+        {/* 데스크탑 때 아래쪽 꼬리 */}
+        <div
+          className={cn(
+            'hidden xl:block',
+            'xl:absolute xl:top-[63px] xl:right-0',
+            'xl:w-0 xl:h-0',
+            'xl:border-t-[30px] xl:border-t-white',
+            'xl:border-l-[30px] xl:border-l-transparent',
+          )}></div>
       </div>
     </div>
   );

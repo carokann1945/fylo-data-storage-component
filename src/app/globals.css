@@ -12,8 +12,15 @@
 
 @utility bgMobile {
   background-image: url('/images/bg-mobile.png');
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+@utility bgDesktop {
+  background-image: url('/images/bg-desktop.png');
+  background-size: 100% 40%;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 @utility typo-1 {
