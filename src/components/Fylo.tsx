@@ -4,7 +4,12 @@ import Image from 'next/image';
 export default function Fylo() {
   return (
     <div
-      className={cn('max-w-[326px] h-[201px]', 'p-[40px]', 'bg-blue-850-custom', 'rounded-[10px] rounded-tr-[100px]')}>
+      className={cn(
+        'max-w-[326px] xl:w-[350px] h-[201px]',
+        'p-[40px]',
+        'bg-blue-850-custom',
+        'rounded-[10px] rounded-tr-[100px]',
+      )}>
       <div className={cn('max-w-[176px] h-[119.27px]', 'flex flex-col gap-[32px]')}>
         <figure className={cn('max-w-[135px] h-[39.27px]', 'relative')}>
           <Image src="/images/logo.svg" alt="logo image" fill className="object-cover" />
